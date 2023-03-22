@@ -1,6 +1,7 @@
 * {
   font-family: "Rajdhani", sans-serif;
 }
+
 .header-container {
   display: flex;
   align-items: center;
@@ -9,6 +10,27 @@
   max-width: 10%;
 }
 .header-container > h1 {
+  color: blue;
   font-size: 2rem;
   font-weight: 700;
+}
+/* Home cart */
+.cart {
+  background-color: #ffffff;
+}
+
+/* services */
+@media only screen and (min-width: 768px) {
+  .home-container {
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+    background: #f2f4fa;
+  }
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .services-container {
+    padding: 3em;
+  }
 }

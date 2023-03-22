@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "YOGA CLASSES",
+    "age": "20-25",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 30,
+    "img": "https://images.squarespace-cdn.com/content/v1/540e6df4e4b037d78af474c8/1532033656379-6V4Q75Z6K4BI6Z9IZ1R3/young+woman+yoga+leg+and+arm+stretch+in+Beaconsfield?format=1000w"
+  },
+  {
+    "id": 2,
+    "name": "PERSONAL TRAINING",
+    "age": "20-25",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 30,
+    "img": "https://images.squarespace-cdn.com/content/v1/540e6df4e4b037d78af474c8/1532033656379-6V4Q75Z6K4BI6Z9IZ1R3/young+woman+yoga+leg+and+arm+stretch+in+Beaconsfield?format=1000w"
+  },
+  {
+    "id": 3,
+    "name": "AEROBICS CLASSES",
+    "age": "20-25",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 30,
+    "img": "https://images.squarespace-cdn.com/content/v1/540e6df4e4b037d78af474c8/1532033656379-6V4Q75Z6K4BI6Z9IZ1R3/young+woman+yoga+leg+and+arm+stretch+in+Beaconsfield?format=1000w"
+  },
+  {
+    "id": 4,
+    "name": "SPINNING STUDIO",
+    "age": "20-25",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 30,
+    "img": "https://images.squarespace-cdn.com/content/v1/540e6df4e4b037d78af474c8/1532033656379-6V4Q75Z6K4BI6Z9IZ1R3/young+woman+yoga+leg+and+arm+stretch+in+Beaconsfield?format=1000w"
+  },
+  {
+    "id": 5,
+    "name": "ZUMBA CLASSES",
+    "age": "20-25",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 30,
+    "img": "https://images.squarespace-cdn.com/content/v1/540e6df4e4b037d78af474c8/1532033656379-6V4Q75Z6K4BI6Z9IZ1R3/young+woman+yoga+leg+and+arm+stretch+in+Beaconsfield?format=1000w"
+  },
+  {
+    "id": 6,
+    "name": "FUNCTIONAL TRAINING",
+    "age": "20-25",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 30,
+    "img": "https://images.squarespace-cdn.com/content/v1/540e6df4e4b037d78af474c8/1532033656379-6V4Q75Z6K4BI6Z9IZ1R3/young+woman+yoga+leg+and+arm+stretch+in+Beaconsfield?format=1000w"
+  }
+]
