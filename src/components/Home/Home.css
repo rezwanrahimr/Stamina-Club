@@ -43,7 +43,7 @@
 .add-break {
   background-color: #f2f4fa;
   padding: 1em;
-  margin: 2em 1.2em;
+  margin: 1em 1.2em 2em 1.2em;
   border-radius: 1em;
   display: flex;
   justify-content: space-around;
@@ -53,6 +53,14 @@
   border: none;
   color: black;
   font-weight: 600;
+}
+/* exercise-time */
+.exercise-time,
+.break-time {
+  background-color: #f2f4fa;
+  padding: 1em;
+  margin: 1em 1.2em;
+  border-radius: 0.8em;
 }
 .cart {
   background-color: #ffffff;

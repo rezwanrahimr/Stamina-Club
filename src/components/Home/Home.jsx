@@ -64,13 +64,24 @@ const Home = () => {
             <span style={{ fontSize: ".9rem", opacity: "50%" }}>Age</span>
           </div>
         </div>
-        <h6>Add A Break</h6>
+        <h6 className="ms-4">Add A Break</h6>
         <div className="add-break">
           <Button className="rounded-circle">10s</Button>
           <Button className="rounded-circle">20s</Button>
           <Button className="rounded-circle">30s</Button>
           <Button className="rounded-circle">40s</Button>
           <Button className="rounded-circle">50s</Button>
+        </div>
+        <h6 className="ms-4 pt-2">Exercise Details</h6>
+        <div className="exercise-time">
+          <span className="fw-bold me-5">Exercise time</span>
+          <span className="ms-5">0</span>
+          <span> seconds</span>
+        </div>
+        <div className="break-time">
+          <span className="fw-bold me-5">Break time </span>
+          <span className="ms-5">0</span>
+          <span> seconds</span>
         </div>
       </div>
     </div>
