@@ -82,21 +82,67 @@ const Home = () => {
         </div>
         <h6 className="ms-4">Add A Break</h6>
         <div className="add-break">
-          <Button className="rounded-circle" onClick={() => setBreakTime(10)}>
-            10s
-          </Button>
-          <Button className="rounded-circle" onClick={() => setBreakTime(20)}>
-            20s
-          </Button>
-          <Button className="rounded-circle" onClick={() => setBreakTime(30)}>
-            30s
-          </Button>
-          <Button className="rounded-circle" onClick={() => setBreakTime(40)}>
-            40s
-          </Button>
-          <Button className="rounded-circle" onClick={() => setBreakTime(50)}>
-            50s
-          </Button>
+          {breakTime == 10 ? (
+            <Button
+              className="rounded-circle bg-primary text-white"
+              onClick={() => setBreakTime(10)}
+            >
+              10s
+            </Button>
+          ) : (
+            <Button className="rounded-circle" onClick={() => setBreakTime(10)}>
+              10s
+            </Button>
+          )}
+          {breakTime == 20 ? (
+            <Button
+              className="rounded-circle bg-primary text-white"
+              onClick={() => setBreakTime(20)}
+            >
+              20s
+            </Button>
+          ) : (
+            <Button className="rounded-circle" onClick={() => setBreakTime(20)}>
+              20s
+            </Button>
+          )}
+
+          {breakTime == 30 ? (
+            <Button
+              className="rounded-circle bg-primary text-white"
+              onClick={() => setBreakTime(30)}
+            >
+              30s
+            </Button>
+          ) : (
+            <Button className="rounded-circle" onClick={() => setBreakTime(30)}>
+              30s
+            </Button>
+          )}
+          {breakTime == 40 ? (
+            <Button
+              className="rounded-circle bg-primary text-white"
+              onClick={() => setBreakTime(40)}
+            >
+              40s
+            </Button>
+          ) : (
+            <Button className="rounded-circle" onClick={() => setBreakTime(40)}>
+              40s
+            </Button>
+          )}
+          {breakTime == 50 ? (
+            <Button
+              className="rounded-circle bg-primary text-white"
+              onClick={() => setBreakTime(50)}
+            >
+              50s
+            </Button>
+          ) : (
+            <Button className="rounded-circle" onClick={() => setBreakTime(50)}>
+              50s
+            </Button>
+          )}
         </div>
         <h6 className="ms-4 pt-2">Exercise Details</h6>
         <div className="exercise-time">
