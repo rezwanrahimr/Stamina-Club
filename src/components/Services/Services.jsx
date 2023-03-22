@@ -3,8 +3,10 @@ import Card from "react-bootstrap/Card";
 import "./Services.css";
 
 const Services = (props) => {
-  const { id, name, text, time, age, img } = props.service;
-  console.log(props.service);
+  const { handleTime, service } = props;
+  const { id, name, text, time, age, img } = service;
+  // console.log(props);
+
   return (
     <div>
       <Card style={{ width: "16rem" }} className="service-cart">
@@ -15,7 +17,7 @@ const Services = (props) => {
           <p className="fw-bolder">For Age : {age}</p>
           <p className="fw-bolder">Time required : {time}s</p>
 
-          <button>Add to list</button>
+          <button onClick={() => handleTime(service)}>Add to list</button>
         </Card.Body>
       </Card>
     </div>

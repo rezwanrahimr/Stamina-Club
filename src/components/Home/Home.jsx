@@ -2,18 +2,30 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import logo from "../../assets/logo.png";
 import Services from "../Services/Services";
-import user from "../../assets/user.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 
 const Home = () => {
   const [services, setServices] = useState([]);
+  const [breakTime, setBreakTime] = useState(0);
+  const [exerciseTime, setExerciseTimes] = useState([]);
+
   useEffect(() => {
     fetch("../../../public/data")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+  let toatlTime = 0;
+  const handleTime = (service) => {
+    const newExercise = [...exerciseTime, service];
+    setExerciseTimes(newExercise);
+  };
+
+  for (const time of exerciseTime) {
+    toatlTime = toatlTime + parseInt(time.time);
+  }
+  console.log(toatlTime);
   return (
     <div className="home-container">
       <div className="services-container">
@@ -24,7 +36,11 @@ const Home = () => {
         <h3>Select today’s exercise</h3>
         <div className="services">
           {services.map((service) => (
-            <Services key={service.id} service={service}></Services>
+            <Services
+              key={service.id}
+              service={service}
+              handleTime={handleTime}
+            ></Services>
           ))}
         </div>
       </div>
@@ -66,22 +82,35 @@ const Home = () => {
         </div>
         <h6 className="ms-4">Add A Break</h6>
         <div className="add-break">
-          <Button className="rounded-circle">10s</Button>
-          <Button className="rounded-circle">20s</Button>
-          <Button className="rounded-circle">30s</Button>
-          <Button className="rounded-circle">40s</Button>
-          <Button className="rounded-circle">50s</Button>
+          <Button className="rounded-circle" onClick={() => setBreakTime(10)}>
+            10s
+          </Button>
+          <Button className="rounded-circle" onClick={() => setBreakTime(20)}>
+            20s
+          </Button>
+          <Button className="rounded-circle" onClick={() => setBreakTime(30)}>
+            30s
+          </Button>
+          <Button className="rounded-circle" onClick={() => setBreakTime(40)}>
+            40s
+          </Button>
+          <Button className="rounded-circle" onClick={() => setBreakTime(50)}>
+            50s
+          </Button>
         </div>
         <h6 className="ms-4 pt-2">Exercise Details</h6>
         <div className="exercise-time">
           <span className="fw-bold me-5">Exercise time</span>
-          <span className="ms-5">0</span>
+          <span className="ms-5">{toatlTime}</span>
           <span> seconds</span>
         </div>
         <div className="break-time">
           <span className="fw-bold me-5">Break time </span>
-          <span className="ms-5">0</span>
+          <span className="ms-5">{breakTime}</span>
           <span> seconds</span>
+        </div>
+        <div className="d-flex justify-content-center">
+          <button className="completed-btn">Activity Completed</button>
         </div>
       </div>
     </div>

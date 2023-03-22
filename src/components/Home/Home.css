@@ -1,5 +1,5 @@
 * {
-  /* font-family: "Rajdhani", sans-serif; */
+  font-family: "Rajdhani", sans-serif;
 }
 
 .header-container {
@@ -61,6 +61,12 @@
   padding: 1em;
   margin: 1em 1.2em;
   border-radius: 0.8em;
+}
+.completed-btn {
+  width: 80%;
+  border: none;
+  background-color: #bfc5d7;
+  margin-top: 2em;
 }
 .cart {
   background-color: #ffffff;
