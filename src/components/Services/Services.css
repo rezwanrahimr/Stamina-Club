@@ -6,3 +6,16 @@
   line-height: 15px;
   margin-top: 1em;
 }
+.service-cart button {
+  width: 12em;
+  border: none;
+  background-color: #f2f4fa;
+}
+.service-cart button:hover {
+  background-color: #c6cbd9;
+}
+.text {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  opacity: 70%;
+}
