@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
-import logo from "../../assets/pngtree-sport-gym-logo-bodybuilder-with-big-muscles-posing-isolated-vector-silhouette-image_322192-removebg-preview.png";
+import logo from "../../assets/logo.png";
 import Services from "../Services/Services";
+import user from "../../assets/user.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const [services, setServices] = useState([]);
@@ -24,7 +27,24 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="cart"></div>
+      <div className="cart">
+        <div className="user-info">
+          <div style={{ width: "40%" }}>
+            <img
+              src="https://images.saymedia-content.com/.image/t_share/MTc0MjEyMzU5NTc1ODQwMjUy/how-to-be-a-gentleman-a-begginers-guide.jpg"
+              alt="Rezwan Rahim"
+            />
+          </div>
+          <div style={{ width: "60%" }}>
+            <h5>Rezwan Rahim</h5>
+            <small>
+              <FontAwesomeIcon icon={faLocationDot} />
+              <span></span>
+              Dhaka,Bangladesh
+            </small>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

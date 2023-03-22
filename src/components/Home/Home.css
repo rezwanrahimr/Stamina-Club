@@ -1,5 +1,5 @@
 * {
-  font-family: "Rajdhani", sans-serif;
+  /* font-family: "Rajdhani", sans-serif; */
 }
 
 .header-container {
@@ -16,6 +16,21 @@
   margin-left: 0.5em;
 }
 /* Home cart */
+.user-info {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  margin-top: 2em;
+}
+.user-info span {
+  margin: 0.4em;
+}
+.user-info img {
+  max-width: 30%;
+  border-radius: 0.5em;
+  margin-left: 4em;
+}
+
 .cart {
   background-color: #ffffff;
 }
