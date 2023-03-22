@@ -1,0 +1,14 @@
+* {
+  font-family: "Rajdhani", sans-serif;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header-container > img {
+  max-width: 10%;
+}
+.header-container > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
