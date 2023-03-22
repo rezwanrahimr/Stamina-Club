@@ -5,6 +5,7 @@ import Services from "../Services/Services";
 import user from "../../assets/user.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "react-bootstrap";
 
 const Home = () => {
   const [services, setServices] = useState([]);
@@ -43,6 +44,33 @@ const Home = () => {
               Dhaka,Bangladesh
             </small>
           </div>
+        </div>
+        <div className="body-info d-flex justify-content-around">
+          <div>
+            <span className="fs-4 fw-bolder"> 55</span>{" "}
+            <span style={{ fontSize: ".9rem", opacity: "50%" }}>kg</span>
+            <br />
+            <span style={{ fontSize: ".9rem", opacity: "50%" }}>Weight</span>
+          </div>
+          <div>
+            <span className="fs-4 fw-bolder"> 5.5</span>
+            <br />
+            <span style={{ fontSize: ".9rem", opacity: "50%" }}>Height</span>
+          </div>
+          <div>
+            <span className="fs-4 fw-bolder"> 25</span>{" "}
+            <span style={{ fontSize: ".9rem", opacity: "50%" }}>yrs</span>
+            <br />
+            <span style={{ fontSize: ".9rem", opacity: "50%" }}>Age</span>
+          </div>
+        </div>
+        <h6>Add A Break</h6>
+        <div className="add-break">
+          <Button className="rounded-circle">10s</Button>
+          <Button className="rounded-circle">20s</Button>
+          <Button className="rounded-circle">30s</Button>
+          <Button className="rounded-circle">40s</Button>
+          <Button className="rounded-circle">50s</Button>
         </div>
       </div>
     </div>
