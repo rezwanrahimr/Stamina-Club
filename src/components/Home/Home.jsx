@@ -7,8 +7,9 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 
 const Home = () => {
+  let getLocaBreakTime = localStorage.getItem("breakTime");
   const [services, setServices] = useState([]);
-  const [breakTime, setBreakTime] = useState(0);
+  const [breakTime, setBreakTime] = useState(getLocaBreakTime);
   const [exerciseTime, setExerciseTimes] = useState([]);
 
   useEffect(() => {
@@ -25,7 +26,17 @@ const Home = () => {
   for (const time of exerciseTime) {
     toatlTime = toatlTime + parseInt(time.time);
   }
-  console.log(toatlTime);
+
+  /*...................
+  break time
+  ....................*/
+
+  if (!getLocaBreakTime) {
+    localStorage.setItem("breakTime", breakTime);
+  } else {
+    localStorage.setItem("breakTime", breakTime);
+  }
+
   return (
     <div className="home-container">
       <div className="services-container">
