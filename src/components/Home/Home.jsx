@@ -5,6 +5,9 @@ import Services from "../Services/Services";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   let getLocaBreakTime = localStorage.getItem("breakTime");
@@ -13,18 +16,27 @@ const Home = () => {
   const [exerciseTime, setExerciseTimes] = useState([]);
 
   useEffect(() => {
-    fetch("../../../public/data")
+    fetch("../../../data.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   let toatlTime = 0;
+  const notify = () => toast.success("Successful!");
   const handleTime = (service) => {
     const newExercise = [...exerciseTime, service];
     setExerciseTimes(newExercise);
   };
+  const exercise = localStorage.getItem("exercise-time");
 
   for (const time of exerciseTime) {
     toatlTime = toatlTime + parseInt(time.time);
+
+    if (!exercise) {
+      localStorage.setItem("exercise-time", toatlTime);
+    } else {
+      localStorage.setItem("exercise-time", toatlTime);
+      toatlTime = parseInt(exercise);
+    }
   }
 
   /*...................
@@ -51,6 +63,7 @@ const Home = () => {
               key={service.id}
               service={service}
               handleTime={handleTime}
+              exerciseTime={exerciseTime}
             ></Services>
           ))}
         </div>
@@ -64,8 +77,8 @@ const Home = () => {
             />
           </div>
           <div style={{ width: "60%" }}>
-            <h5>Rezwan Rahim</h5>
-            <small>
+            <h5 className="fw-bold">Rezwan Rahim</h5>
+            <small className="fw-bold">
               <FontAwesomeIcon icon={faLocationDot} />
               <span></span>
               Dhaka,Bangladesh
@@ -167,9 +180,15 @@ const Home = () => {
           <span> seconds</span>
         </div>
         <div className="d-flex justify-content-center">
-          <button className="completed-btn">Activity Completed</button>
+          <button
+            className="completed-btn  bg-primary text-white"
+            onClick={notify}
+          >
+            Activity Completed
+          </button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

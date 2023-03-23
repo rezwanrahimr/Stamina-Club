@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "YOGA CLASSES",
+    "age": "25-29",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 60,
+    "img": "./src/assets/pexels-eduardo-lópez-14055662.jpg"
+  },
+  {
+    "id": 2,
+    "name": "PERSONAL TRAINING",
+    "age": "20-28",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 30,
+    "img": "./src/assets/pexels-web-daytona-5128291.jpg"
+  },
+  {
+    "id": 3,
+    "name": "AEROBICS CLASSES",
+    "age": "18-25",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 90,
+    "img": "./src/assets/pexels-shotpot-4047156.jpg"
+  },
+  {
+    "id": 4,
+    "name": "SPINNING STUDIO",
+    "age": "20-30",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 30,
+    "img": "./src/assets/pexels-andrea-piacquadio-863974.jpg"
+  },
+  {
+    "id": 5,
+    "name": "ZUMBA CLASSES",
+    "age": "22-25",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 60,
+    "img": "./src/assets/pexels-victor-freitas-841130.jpg"
+  },
+  {
+    "id": 6,
+    "name": "FUNCTIONAL TRAINING",
+    "age": "20-25",
+    "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
+    "time": 30,
+    "img": "./src/assets/pexels-leon-ardho-1552249.jpg"
+  }
+]

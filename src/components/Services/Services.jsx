@@ -3,9 +3,12 @@ import Card from "react-bootstrap/Card";
 import "./Services.css";
 
 const Services = (props) => {
-  const { handleTime, service } = props;
+  const { handleTime, service, exerciseTime } = props;
   const { id, name, text, time, age, img } = service;
-  // console.log(props);
+  let arry = [];
+  for (const datas of exerciseTime) {
+    arry.push(datas.id);
+  }
 
   return (
     <div>
@@ -16,8 +19,21 @@ const Services = (props) => {
           <Card.Text className="text">{text}</Card.Text>
           <p className="fw-bolder">For Age : {age}</p>
           <p className="fw-bolder">Time required : {time}s</p>
-
-          <button onClick={() => handleTime(service)}>Add to list</button>
+          {arry.includes(id) ? (
+            <button
+              className=" bg-success text-white"
+              onClick={() => handleTime(service)}
+            >
+              Added
+            </button>
+          ) : (
+            <button
+              className="bg-primary text-white"
+              onClick={() => handleTime(service)}
+            >
+              Add to list
+            </button>
+          )}
         </Card.Body>
       </Card>
     </div>
