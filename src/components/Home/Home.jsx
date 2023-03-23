@@ -1,41 +1,46 @@
 import React, { useEffect, useState } from "react";
-import "./Home.css";
 import logo from "../../assets/logo.png";
 import Services from "../Services/Services";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
+import "./Home.css";
 
 const Home = () => {
-  let getLocaBreakTime = localStorage.getItem("breakTime");
+  // get previous break time from local storage.
+  let getStorageBreakTime = localStorage.getItem("breakTime");
   const [services, setServices] = useState([]);
-  const [breakTime, setBreakTime] = useState(getLocaBreakTime);
+  const [breakTime, setBreakTime] = useState(getStorageBreakTime);
   const [exerciseTime, setExerciseTimes] = useState([]);
 
+  let totalTime = 0;
+  const notify = () => toast.success("Successful!");
+
+  // Load Services
   useEffect(() => {
     fetch("../../../data.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
-  let toatlTime = 0;
-  const notify = () => toast.success("Successful!");
+
+  // Exercise Time
   const handleTime = (service) => {
     const newExercise = [...exerciseTime, service];
     setExerciseTimes(newExercise);
   };
-  const exercise = localStorage.getItem("exercise-time");
 
+  //Get Exercise Time from Local Storage.
+  const exercise = localStorage.getItem("exercise-time");
   for (const time of exerciseTime) {
-    toatlTime = toatlTime + parseInt(time.time);
+    totalTime = totalTime + parseInt(time.time);
 
     if (!exercise) {
-      localStorage.setItem("exercise-time", toatlTime);
+      localStorage.setItem("exercise-time", totalTime);
     } else {
-      localStorage.setItem("exercise-time", toatlTime);
-      toatlTime = parseInt(exercise);
+      localStorage.setItem("exercise-time", totalTime);
+      totalTime = parseInt(exercise);
     }
   }
 
@@ -43,7 +48,7 @@ const Home = () => {
   break time
   ....................*/
 
-  if (!getLocaBreakTime) {
+  if (!getStorageBreakTime) {
     localStorage.setItem("breakTime", breakTime);
   } else {
     localStorage.setItem("breakTime", breakTime);
@@ -68,6 +73,10 @@ const Home = () => {
           ))}
         </div>
       </div>
+
+      {/* ....................... 
+               Cart Start
+      ........................... */}
       <div className="cart">
         <div className="user-info">
           <div style={{ width: "40%" }}>
@@ -171,7 +180,7 @@ const Home = () => {
         <h6 className="ms-4 pt-2">Exercise Details</h6>
         <div className="exercise-time">
           <span className="fw-bold me-5">Exercise time</span>
-          <span className="ms-5">{toatlTime}</span>
+          <span className="ms-5">{totalTime}</span>
           <span> seconds</span>
         </div>
         <div className="break-time">

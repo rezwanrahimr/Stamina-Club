@@ -5,7 +5,7 @@
     "age": "25-29",
     "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
     "time": 60,
-    "img": "./src/assets/pexels-eduardo-lópez-14055662.jpg"
+    "img": "https://i.postimg.cc/Rqr9ZYRM/pexels-eduardo-l-pez-14055662.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "age": "20-28",
     "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
     "time": 30,
-    "img": "./src/assets/pexels-web-daytona-5128291.jpg"
+    "img": "https://i.postimg.cc/52VYPKVd/pexels-shotpot-4047156.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "age": "18-25",
     "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
     "time": 90,
-    "img": "./src/assets/pexels-shotpot-4047156.jpg"
+    "img": "https://i.postimg.cc/766qs0hy/pexels-andrea-piacquadio-863974.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "age": "20-30",
     "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
     "time": 30,
-    "img": "./src/assets/pexels-andrea-piacquadio-863974.jpg"
+    "img": "https://i.postimg.cc/6Q67K7qM/pexels-victor-freitas-841130.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "age": "22-25",
     "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
     "time": 60,
-    "img": "./src/assets/pexels-victor-freitas-841130.jpg"
+    "img": "https://i.postimg.cc/43wJQBJ5/pexels-leon-ardho-1552249.jpg"
   },
   {
     "id": 6,
@@ -45,6 +45,6 @@
     "age": "20-25",
     "text": "A simple yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you sleep better at time,",
     "time": 30,
-    "img": "./src/assets/pexels-leon-ardho-1552249.jpg"
+    "img": "https://i.postimg.cc/yY93y42y/pexels-web-daytona-5128291.jpg"
   }
 ]

@@ -73,6 +73,21 @@
 }
 
 /* services */
+@media only screen and (max-width: 600px) {
+  .header-container {
+    margin: 1em;
+  }
+  .services-container h3 {
+    text-align: center;
+  }
+  .services {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .completed-btn {
+    margin-bottom: 5em;
+  }
+}
 @media only screen and (min-width: 768px) {
   .home-container {
     display: grid;
@@ -82,6 +97,7 @@
   .services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
   }
   .services-container {
     padding: 3em;

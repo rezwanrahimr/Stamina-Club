@@ -5,9 +5,11 @@ import "./Services.css";
 const Services = (props) => {
   const { handleTime, service, exerciseTime } = props;
   const { id, name, text, time, age, img } = service;
-  let arry = [];
-  for (const datas of exerciseTime) {
-    arry.push(datas.id);
+
+  // store selected service id.
+  let addedItems = [];
+  for (const selectedItems of exerciseTime) {
+    addedItems.push(selectedItems.id);
   }
 
   return (
@@ -19,7 +21,7 @@ const Services = (props) => {
           <Card.Text className="text">{text}</Card.Text>
           <p className="fw-bolder">For Age : {age}</p>
           <p className="fw-bolder">Time required : {time}s</p>
-          {arry.includes(id) ? (
+          {addedItems.includes(id) ? (
             <button
               className=" bg-success text-white"
               onClick={() => handleTime(service)}
